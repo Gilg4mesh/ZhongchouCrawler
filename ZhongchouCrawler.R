@@ -50,7 +50,7 @@ crawlInfo <- function(id) {
   haveMedia <- unlist(xpathSApply(doc = projectURL, path = "/html/body/div[@class='jlxqOuterBox']/div/div[1]/div[4]/div[1]/div[1]/a/@href")) # 影片網址
   ifelse( is.null(haveMedia), haveMedia <- FALSE, haveMedia <- TRUE )  # 是否有影片
   picNums <- length(xpathSApply(doc = projectURL, path = "/html/body/div[@class='jlxqOuterBox']/div/div[1]/div[4]/div[1]/div[1]/div[3]/img")) # 圖片數量
-  priceType <- length(xpathSApply(doc = projectURL, path = "/html/body/div[@class='jlxqOuterBox']/div/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div/h3/b",xmlValue))-1
+  priceType <- length(xpathSApply(doc = projectURL, path = "/html/body/div[@class='jlxqOuterBox']/div/div[1]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div/h3/b",xmlValue))-1 # 支持金額數
   
   info <- cbind( id, projectName, projectLauncher, haveMedia, picNums, followers, sup, got, percent, wanted, projectType, projectCity, fresh, comment, priceType, report )
   if ( ncol(info) != 16 ) {
@@ -118,3 +118,9 @@ for ( i in 2:nrow(linkID) ) {
     
   ) # tryCatch
 }
+
+
+
+
+log_info <- log_info[,-4]
+View(log_info)
