@@ -2,16 +2,17 @@
 
 ## 使用環境
 OSX 10.10.5
+<br>
 R 3.2.3
+<br>
 RStudio 0.99.879
 
----
 
 ## 爬取範圍
 眾籌網 ( 已完成籌資的項目 )
+<br>
 http://www.zhongchou.com/browse/re
 
----
 
 ## 取得欄位
 1. 項目編號
@@ -33,8 +34,8 @@ http://www.zhongchou.com/browse/re
 17. 支持金額數
 18. 項目回報天數
 
----
 
 ## 注意事項
 可能有部分資料會抓取失敗
+<br>
 重複抓取即可
