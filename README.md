@@ -38,4 +38,4 @@ http://www.zhongchou.com/browse/re
 ## 注意事項
 可能有部分資料會抓取失敗
 <br>
-重複抓取即可
+失敗部分重複抓取即可
